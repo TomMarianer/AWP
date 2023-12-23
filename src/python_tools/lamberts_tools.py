@@ -13,8 +13,8 @@ import math
 import numpy as np
 
 # AWP libraries
-import numerical_tools as nt
-import planetary_data  as pd
+import python_tools.numerical_tools as nt
+import python_tools.planetary_data  as pd
 
 def lamberts_universal_variables( r0, r1, deltat, args ):
 	'''

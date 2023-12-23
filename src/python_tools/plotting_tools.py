@@ -12,7 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use( 'dark_background' )
 
-import cities_lat_long
+import python_tools.cities_lat_long
 
 time_handler = {
 	'seconds': { 'coeff': 1.0,        'xlabel': 'Time (seconds)' },
@@ -332,6 +332,9 @@ def plot_orbits( rs, args, vectors = [] ):
 
 	if _args[ 'show' ]:
 		plt.show()
+
+	if _args['return_axes']:
+		return ax
 
 	plt.close()
 

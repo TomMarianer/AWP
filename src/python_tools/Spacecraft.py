@@ -18,11 +18,11 @@ import matplotlib.pyplot as plt
 plt.style.use( 'dark_background' )
 
 # AWP libraries
-import orbit_calculations as oc
-import numerical_tools    as nt
-import plotting_tools     as pt
-import planetary_data     as pd
-import spice_data         as sd
+import python_tools.orbit_calculations as oc
+import python_tools.numerical_tools    as nt
+import python_tools.plotting_tools     as pt
+import python_tools.planetary_data     as pd
+import python_tools.spice_data         as sd
 
 def null_config():
 	return {
@@ -259,7 +259,7 @@ class Spacecraft:
 		pt.plot_eclipse_array( self.ets, self.eclipse_array, args )
 
 	def plot_3d( self, args = { 'show': True } ):
-		pt.plot_orbits( [ self.states[ :, :3 ] ], args )
+		return pt.plot_orbits( [ self.states[ :, :3 ] ], args )
 
 	def plot_groundtracks( self, args = { 'show': True } ):
 		if not self.latlons_calculated:

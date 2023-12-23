@@ -12,9 +12,9 @@ import math
 import spiceypy as spice
 
 # AWP library
-import numerical_tools as nt
-import lamberts_tools  as lt
-import planetary_data  as pd
+import python_tools.numerical_tools as nt
+import python_tools.lamberts_tools  as lt
+import python_tools.planetary_data  as pd
 
 ECLIPSE_MAP = {
 	'umbra'   : ( ( 1,  3 ), ( -1, -3 ) ),

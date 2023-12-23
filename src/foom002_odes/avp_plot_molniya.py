@@ -11,8 +11,8 @@ for Molniya orbit
 Try changing out the orbital parameters!
 '''
 
-from Spacecraft import Spacecraft as SC
-import orbit_calculations as oc
+from python_tools.Spacecraft import Spacecraft as SC
+import python_tools.orbit_calculations as oc
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,6 +38,7 @@ if __name__ == '__main__':
 	sc = SC( sc_config )
 
 	sc.plot_3d( {
+		'axes_no_fill': False,
 		'colors'   : [ 'c' ],
 		'elevation': 13,
 		'azimuth'  : -13,
